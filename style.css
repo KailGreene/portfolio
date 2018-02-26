@@ -1,0 +1,80 @@
+nothing{
+color: #263c8b
+       #4e74a6
+       #BDBF78
+       #bfa524
+       #2E231F
+}
+:root{ 
+    --primary: #4e74a6;
+    --dark: #263c8b;
+    --light: #BDBF78;
+    --light-2:#FDFEDD;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8)
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 25px 1fr 1fr 1fr 25px ;
+    grid-template-rows: 50px 1fr 1fr 1fr 50px;
+    grid-row-gap: 15px;
+    grid-template-areas: "head head head head head "
+                         ". about about about ."
+                         ". portfolio portfolio portfolio ."
+                         ". contact contact contact ."
+                         "footer footer footer footer footer"
+}
+body{
+    background-color: var(--light);
+}
+h1{
+    text-align: center;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+.container .head .main-nav ul{
+    display: flex;
+    flex-direction: row;
+    min-height: 50px;
+    justify-content: space-between;
+    text-transform: uppercase;
+    list-style-type: none;
+    padding: 15px;
+
+}
+.head{
+    align-items: center;
+    grid-area: head;
+    position: fixed;
+    width: 100%;
+    background-color: var(--dark);
+}
+
+.about{
+    height: 90vh;
+    grid-area: about;
+    background-color: var(--light-2);
+    padding-top: 0px;
+}
+.portfolio{
+    height: 90vh;
+    grid-area: portfolio;
+    background-color: var(--light-2);
+}
+.contact{
+    height: 90vh;
+    grid-area: contact;
+    background-color: var(--light-2);
+    box-shadow: var(--shadow);
+}
+.footer{
+    height: 10vh;
+    grid-area: footer;
+    background-color: var(--dark);
+    grid-row-gap: 0px;
+}
