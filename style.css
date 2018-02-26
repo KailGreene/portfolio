@@ -14,11 +14,12 @@ color: #263c8b
 }
 
 .container{
+    padding-top: 55px;
     display: grid;
-    grid-template-columns: 25px 1fr 1fr 1fr 25px ;
-    grid-template-rows: 50px 1fr 1fr 1fr 50px;
+    grid-template-columns: 50px 1fr 1fr 1fr 50px ;
+    grid-template-rows: 1fr 1fr 1fr 50px;
     grid-row-gap: 15px;
-    grid-template-areas: "head head head head head "
+    grid-template-areas:
                          ". about about about ."
                          ". portfolio portfolio portfolio ."
                          ". contact contact contact ."
@@ -30,6 +31,10 @@ body{
 h1{
     text-align: center;
 }
+ul{
+    padding: 0;
+    list-style: none;
+}
 
 a,
 a:visited,
@@ -37,23 +42,19 @@ a:hover,
 a:active {
     color: inherit;
 }
-.container .head .main-nav ul{
+.nav{
     display: flex;
     flex-direction: row;
-    min-height: 50px;
-    justify-content: space-between;
-    text-transform: uppercase;
-    list-style-type: none;
-    padding: 15px;
-
-}
-.head{
-    align-items: center;
-    grid-area: head;
     position: fixed;
     width: 100%;
     background-color: var(--dark);
+    min-height: 50px;
+    text-transform: uppercase;
+    list-style-type: none;
+    justify-content: space-around;
+
 }
+
 
 .about{
     height: 90vh;
